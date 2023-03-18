@@ -14,3 +14,15 @@
 	</p>
 	<!-- ... -->
 </article>
+
+<script>
+    export let data;
+    let { books } = data;
+    $: ({ books } = data);
+  </script>
+
+  <ul>
+    {#each books as book}
+      <li>{book.title_short}</li>
+    {/each}
+  </ul>
