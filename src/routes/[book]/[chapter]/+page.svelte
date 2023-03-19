@@ -11,6 +11,9 @@
   <h1>{book.title_short}</h1>
   <h2>Chapter {params.chapter}</h2>
 
-  {#each chapter as verse}
-    {verse.t}<br>
-  {/each}
+  <article class="prose lg:prose-xl mx-auto">
+
+    {#each chapter as verse}
+      <p><sub>{verse.v}</sub>{verse.t}</p>
+    {/each}
+  </article>
