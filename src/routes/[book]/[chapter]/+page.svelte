@@ -8,12 +8,10 @@
 
   </script>
 
-  <h1>{book.title_short}</h1>
-  <h2>Chapter {params.chapter}</h2>
 
-  <article class="prose lg:prose-xl mx-auto">
+      <p class="text-base font-semibold leading-7 text-indigo-600">{book.title_short}</p>
+      <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Chapter {params.chapter}</h1>
+      {#each chapter as verse}
+        <p class="mt-6"><sub>{verse.v}</sub>{verse.t}</p>
+      {/each}
 
-    {#each chapter as verse}
-      <p><sub>{verse.v}</sub>{verse.t}</p>
-    {/each}
-  </article>
